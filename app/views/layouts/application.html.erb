@@ -9,10 +9,12 @@
   </head>
 
   <body>
-    <h1>
-      <%= link_to "MisterCocktail", root_path %>
-    </h1>
-    <%= link_to "Add a cocktail", new_cocktail_path %>
-    <%= yield %>
+    <div class="container">
+      <h1>
+        <%= link_to "MisterCocktail", root_path %>
+      </h1>
+      <%= link_to "Add a cocktail", new_cocktail_path %>
+      <%= yield %>
+    </div>
   </body>
 </html>
