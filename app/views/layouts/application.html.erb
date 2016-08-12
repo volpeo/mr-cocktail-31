@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MisterCocktail</title>
+    <title><%= yield_with_default(:title, "Welcome to MisterCocktail") %> | MisterCocktail</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,10 +9,9 @@
 
   <body>
     <div class="container">
-      <h1>
-        <%= link_to "MisterCocktail", root_path %>
-      </h1>
-      <%= link_to "Add a cocktail", new_cocktail_path %>
+      <%= render "shared/navbar" %>
+      <%= render "shared/flashes" %>
+
       <%= yield %>
     </div>
 

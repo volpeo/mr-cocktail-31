@@ -1,11 +1,13 @@
+<% content_for(:title) do %>
+  <%= @cocktail.name %>
+<% end %>
+
 
 <% @cocktail.photos.each do |photo| %>
   <%= cl_image_tag photo.path, width: 200, height: 300, crop: :fill %>
 <% end %>
 
-<h2>
-  <%= @cocktail.name %>
-</h2>
+<%= render 'cocktail_item', cocktail: @cocktail %>
 
 <%= render "doses/form", cocktail: @cocktail, dose: @dose %>
 
